@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -125,24 +124,24 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XPa-KC-mfV">
-                                            <rect key="frame" x="0.0" y="-4" width="450.5" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is some sort of title. It can be long." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-XS-8kc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is some sort of title. It can be long." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-XS-8kc">
                                             <rect key="frame" x="12" y="12" width="351" height="62"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atc-1X-jyn">
-                                            <rect key="frame" x="12" y="82" width="174" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atc-1X-jyn">
+                                            <rect key="frame" x="12" y="84" width="39.5" height="19"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" red="0.72156862749999995" green="0.74509803919999995" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-yT-ehU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-yT-ehU">
                                             <rect key="frame" x="240" y="83" width="107" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.51372549020000002" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -151,11 +150,12 @@
                                     <color key="backgroundColor" red="0.098039215690000001" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="pCI-XS-8kc" firstAttribute="centerY" secondItem="8Vu-A9-pEj" secondAttribute="centerY" constant="10" id="4sT-B6-y2e"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="YN8-yT-ehU" secondAttribute="trailing" constant="12" id="70R-b2-0fc"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="YN8-yT-ehU" secondAttribute="bottom" constant="12" id="OYZ-Jw-lug"/>
+                                        <constraint firstItem="atc-1X-jyn" firstAttribute="leading" secondItem="8Vu-A9-pEj" secondAttribute="leading" constant="12" id="FKB-4D-nai"/>
+                                        <constraint firstItem="pCI-XS-8kc" firstAttribute="top" secondItem="8Vu-A9-pEj" secondAttribute="top" constant="30" id="ZbP-ZP-ysp"/>
                                         <constraint firstItem="pCI-XS-8kc" firstAttribute="top" secondItem="8Vu-A9-pEj" secondAttribute="top" constant="12" id="aah-qp-xO0"/>
                                         <constraint firstItem="pCI-XS-8kc" firstAttribute="leading" secondItem="8Vu-A9-pEj" secondAttribute="leading" constant="12" id="eyv-uT-dUB"/>
                                         <constraint firstAttribute="trailing" secondItem="pCI-XS-8kc" secondAttribute="trailing" constant="12" id="tyT-8f-6J2"/>
+                                        <constraint firstAttribute="bottom" secondItem="atc-1X-jyn" secondAttribute="bottom" constant="21.5" id="wr4-PJ-NcN"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

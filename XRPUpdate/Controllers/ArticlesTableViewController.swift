@@ -11,7 +11,7 @@ import UIKit
 class ArticlesTableViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //dummy stub array
-    let articles: [String] = ["title1", "title2", "title3", "title4"]
+    let articles: [String] = ["title1 ffwef fekljklj fweafwewaefkhl  wfwef", "title2", "title3", "title4"]
     
     // Don't forget to enter this in IB also
     let cellReuseIdentifier = "cell"
@@ -29,6 +29,13 @@ class ArticlesTableViewController:  UIViewController, UITableViewDelegate, UITab
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+
+        //adjust the row heights
+        configureTableView()
+        
+        //remove the default lines between the table rows
+        tableView.separatorStyle = .none
+        
     }
     
     //set the number of rows in the table
@@ -40,9 +47,10 @@ class ArticlesTableViewController:  UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:ArticleCellView = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! ArticleCellView
         
-      
+        //pupulate the cell with data
         cell.title.text = self.articles[indexPath.row]
-        
+        cell.author.text = "XRP Hodor"
+        cell.timeStamp.text = "2 hours ago"
         return cell
     }
     
@@ -51,7 +59,18 @@ class ArticlesTableViewController:  UIViewController, UITableViewDelegate, UITab
         print("You tapped cell number \(indexPath.row).")
     }
 
-    
+    //make the table view resizable depending on the amount of content
+    func configureTableView(){
+        
+        //let the height grow based on the amount of content in the element
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        //set a minimum base height
+        tableView.estimatedRowHeight = 325
+        
+        tableView.reloadData()
+        
+    }
     // MARK: - Table view data source
 
   
